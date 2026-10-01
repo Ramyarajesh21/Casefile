@@ -1,0 +1,109 @@
+:root {
+  --bg: #0b1118;
+  --surface: #121b25;
+  --surface-raised: #18232f;
+  --text: #b8c2cc;
+  --text-h: #f2efe7;
+  --border: #2a3541;
+  --accent: #d2a34a;
+  --accent-bg: rgba(210, 163, 74, 0.12);
+  --accent-border: rgba(210, 163, 74, 0.5);
+  --social-bg: rgba(255, 255, 255, 0.035);
+  --shadow: 0 16px 42px rgba(0, 0, 0, 0.28);
+  --control-height: 42px;
+  --control-padding: 10px 12px;
+  --button-padding: 9px 16px;
+  --button-radius: 4px;
+  --card-radius: 6px;
+  --card-padding: 20px;
+  --page-padding-top: 32px;
+  --page-padding-bottom: 64px;
+  --page-padding-top-mobile: 24px;
+  --page-padding-bottom-mobile: 44px;
+  --form-gap: 14px;
+  --focus-ring: rgba(210, 163, 74, 0.72);
+  --color-danger: #efb1a5;
+  --color-danger-bg: rgba(133, 50, 39, 0.14);
+  --color-success: #a8d7b5;
+  --color-success-bg: rgba(70, 133, 94, 0.12);
+  --sans: 'Aptos', 'Segoe UI', system-ui, sans-serif;
+  --heading: 'Aptos Display', 'Segoe UI', system-ui, sans-serif;
+  --mono: 'Cascadia Code', Consolas, monospace;
+
+  color-scheme: dark;
+  font: 16px/1.55 var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: var(--bg);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(145deg, #0b1118 0%, #101925 58%, #0b1118 100%);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  overflow-wrap: break-word;
+}
+
+::selection {
+  color: #10151c;
+  background: var(--accent);
+}
+
+@media (max-width: 760px) {
+  :root {
+    font-size: 15px;
+  }
+}

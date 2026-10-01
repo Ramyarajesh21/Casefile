@@ -1,0 +1,217 @@
+.accusation-page {
+  width: min(100% - 40px, 1040px);
+  margin: 0 auto;
+  padding: var(--page-padding-top) 0 var(--page-padding-bottom);
+  text-align: left;
+}
+
+.accusation-page-navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-bottom: 26px;
+}
+
+.accusation-page-navigation a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.accusation-page-navigation a:hover {
+  color: var(--text-h);
+}
+
+.accusation-page-header {
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--border);
+}
+
+.accusation-page-header h1 {
+  margin: 10px 0 8px;
+  overflow-wrap: anywhere;
+}
+
+.accusation-page-header h2 {
+  margin-bottom: 12px;
+}
+
+.accusation-page-header > p:not(.eyebrow) {
+  max-width: 760px;
+  white-space: pre-line;
+  color: var(--text);
+}
+
+.accusation-page-progress {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin-top: 20px;
+  color: var(--text);
+}
+
+.accusation-page-progress strong {
+  color: var(--text-h);
+  text-transform: capitalize;
+}
+
+.accusation-page-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 36px;
+  margin-top: 30px;
+}
+
+.accusation-page-material,
+.accusation-page-form-section {
+  min-width: 0;
+}
+
+.accusation-page-layout h2 {
+  margin: 6px 0 18px;
+}
+
+.accusation-page-material section {
+  margin-top: 24px;
+}
+
+.accusation-page-material h3 {
+  margin: 0 0 10px;
+}
+
+.accusation-page-material ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.accusation-page-material li {
+  display: grid;
+  gap: 5px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.accusation-page-material li strong {
+  color: var(--text-h);
+}
+
+.accusation-page-material li span,
+.accusation-page-muted {
+  color: var(--text);
+}
+
+.accusation-page-form {
+  display: grid;
+  gap: var(--form-gap);
+}
+
+.accusation-page-form > label:not(.accusation-page-confirmation) {
+  display: grid;
+  gap: 6px;
+  color: var(--text-h);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.accusation-page-form input:not([type='checkbox']),
+.accusation-page-form select,
+.accusation-page-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: var(--control-height);
+  padding: var(--control-padding);
+  border: 1px solid var(--border);
+  border-radius: var(--button-radius);
+  color: var(--text-h);
+  background: var(--bg);
+  font: inherit;
+}
+
+.accusation-page-form textarea {
+  resize: vertical;
+}
+
+.accusation-page-form input:focus-visible,
+.accusation-page-form select:focus-visible,
+.accusation-page-form textarea:focus-visible {
+  border-color: var(--accent);
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.accusation-page-confirmation {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.accusation-page-confirmation input {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: var(--accent);
+}
+
+.accusation-page-form .primary-button {
+  justify-self: start;
+}
+
+.accusation-page-submit-error {
+  margin: 0;
+  color: var(--color-danger);
+}
+
+.accusation-page-data-warning,
+.accusation-page-completed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.accusation-page-message {
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.accusation-page-feedback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+@media (max-width: 760px) {
+  .accusation-page {
+    width: min(100% - 32px, 1040px);
+    padding: var(--page-padding-top-mobile) 0 var(--page-padding-bottom-mobile);
+  }
+
+  .accusation-page-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .accusation-page-data-warning,
+  .accusation-page-completed {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

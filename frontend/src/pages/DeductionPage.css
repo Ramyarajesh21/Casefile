@@ -1,0 +1,241 @@
+.deduction-page {
+  width: min(100% - 40px, 1040px);
+  margin: 0 auto;
+  padding: var(--page-padding-top) 0 var(--page-padding-bottom);
+  text-align: left;
+}
+
+.deduction-page-navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-bottom: 26px;
+}
+
+.deduction-page-navigation a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.deduction-page-navigation a:hover {
+  color: var(--text-h);
+}
+
+.deduction-page-header {
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--border);
+}
+
+.deduction-page-header h1 {
+  margin: 10px 0 12px;
+  overflow-wrap: anywhere;
+}
+
+.deduction-page-header > p:not(.eyebrow) {
+  max-width: 760px;
+  white-space: pre-line;
+  color: var(--text);
+}
+
+.deduction-page-progress {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin-top: 20px;
+  color: var(--text);
+}
+
+.deduction-page-progress strong {
+  color: var(--text-h);
+  text-transform: capitalize;
+}
+
+.deduction-page-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 32px;
+  margin-top: 30px;
+}
+
+.deduction-page-resources,
+.deduction-page-form-section {
+  min-width: 0;
+}
+
+.deduction-page-layout h2,
+.deduction-page-saved-list h2 {
+  margin: 6px 0 16px;
+}
+
+.deduction-page-resources ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.deduction-page-resources li {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow-wrap: anywhere;
+}
+
+.deduction-page-form {
+  display: grid;
+  gap: var(--form-gap);
+}
+
+.deduction-page-form label {
+  display: grid;
+  gap: 6px;
+  color: var(--text-h);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.deduction-page-form select,
+.deduction-page-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: var(--control-height);
+  padding: var(--control-padding);
+  border: 1px solid var(--border);
+  border-radius: var(--button-radius);
+  color: var(--text-h);
+  background: var(--bg);
+  font: inherit;
+}
+
+.deduction-page-form textarea {
+  resize: vertical;
+}
+
+.deduction-page-form select:focus-visible,
+.deduction-page-form textarea:focus-visible {
+  border-color: var(--accent);
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.deduction-page-form .primary-button {
+  justify-self: start;
+}
+
+.deduction-page-saved-list {
+  margin-top: 38px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+}
+
+.deduction-page-list-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-bottom: 16px;
+}
+
+.deduction-page-list-heading h2 {
+  margin-bottom: 0;
+}
+
+.deduction-page-list-heading > span {
+  color: var(--text);
+}
+
+.deduction-page-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.deduction-page-record {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.deduction-page-connection {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow-wrap: anywhere;
+}
+
+.deduction-page-connection span {
+  color: var(--text);
+}
+
+.deduction-page-record p {
+  margin: 0;
+  white-space: pre-line;
+}
+
+.deduction-page-record time {
+  color: var(--text);
+  font-size: 13px;
+}
+
+.deduction-page-empty {
+  color: var(--text);
+}
+
+.deduction-page-message {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.deduction-page-feedback,
+.deduction-page-data-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.deduction-page-data-error {
+  justify-content: space-between;
+  margin-top: 18px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.deduction-page-save-error {
+  margin: 0;
+  color: var(--color-danger);
+}
+
+.deduction-page-saved {
+  margin: 0;
+  color: var(--color-success);
+}
+
+@media (max-width: 760px) {
+  .deduction-page {
+    width: min(100% - 32px, 1040px);
+    padding: var(--page-padding-top-mobile) 0 var(--page-padding-bottom-mobile);
+  }
+
+  .deduction-page-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .deduction-page-data-error {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

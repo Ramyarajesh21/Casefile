@@ -1,0 +1,224 @@
+.crime-scene {
+  width: min(100% - 40px, 1040px);
+  margin: 0 auto;
+  padding: var(--page-padding-top) 0 var(--page-padding-bottom);
+  text-align: left;
+}
+
+.crime-scene-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
+  margin-bottom: 26px;
+}
+
+.crime-scene-navigation a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.crime-scene-navigation a:hover {
+  color: var(--text-h);
+}
+
+.crime-scene-header {
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.crime-scene-header h1 {
+  margin: 10px 0 4px;
+  overflow-wrap: anywhere;
+}
+
+.crime-scene-subtitle {
+  color: var(--text);
+}
+
+.crime-scene-location {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 22px;
+}
+
+.crime-scene-location-label,
+.crime-scene-location > span:last-child {
+  color: var(--text);
+}
+
+.crime-scene-location strong {
+  color: var(--text-h);
+}
+
+.crime-scene-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 40px;
+  padding-top: 30px;
+}
+
+.crime-scene-description,
+.crime-scene-clues {
+  min-width: 0;
+}
+
+.crime-scene-description h2,
+.crime-scene-clues h2 {
+  margin: 6px 0 14px;
+}
+
+.crime-scene-description > p:not(.eyebrow),
+.crime-scene-observations p {
+  white-space: pre-line;
+}
+
+.crime-scene-observations {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.crime-scene-observations h3 {
+  margin: 0 0 8px;
+}
+
+.crime-scene-facts {
+  margin: 24px 0 0;
+}
+
+.crime-scene-facts > div {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.crime-scene-facts dt {
+  color: var(--text);
+}
+
+.crime-scene-facts dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: var(--text-h);
+}
+
+.crime-scene-clues-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.crime-scene-clue-count,
+.crime-scene-empty,
+.crime-scene-progress-note {
+  color: var(--text);
+}
+
+.crime-scene-clue-list {
+  display: grid;
+  gap: 12px;
+}
+
+.crime-scene-clue {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.crime-scene-clue-topline,
+.crime-scene-clue-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 14px;
+}
+
+.crime-scene-clue-type,
+.crime-scene-discovery,
+.crime-scene-clue-meta {
+  color: var(--text);
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.crime-scene-discovery.is-discovered {
+  color: var(--color-success);
+}
+
+.crime-scene-clue h3,
+.crime-scene-clue p {
+  margin: 0;
+}
+
+.crime-scene-clue h3 {
+  color: var(--text-h);
+}
+
+.crime-scene-clue .secondary-button {
+  justify-self: start;
+}
+
+.crime-scene-inline-error {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: var(--color-danger);
+}
+
+.crime-scene-progress-note {
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+.crime-scene-message {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.crime-scene-message h1 {
+  margin: 0 0 12px;
+}
+
+.crime-scene-feedback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+@media (max-width: 760px) {
+  .crime-scene {
+    width: min(100% - 32px, 1040px);
+    padding: var(--page-padding-top-mobile) 0 var(--page-padding-bottom-mobile);
+  }
+
+  .crime-scene-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .crime-scene-facts > div {
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 8px;
+  }
+}

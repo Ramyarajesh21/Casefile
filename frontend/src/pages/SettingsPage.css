@@ -1,0 +1,184 @@
+.settings-page {
+  width: min(100% - 40px, 920px);
+  margin: 0 auto;
+  padding: var(--page-padding-top) 0 var(--page-padding-bottom);
+  text-align: left;
+}
+
+.settings-page-heading {
+  margin-bottom: 26px;
+}
+
+.settings-page-heading h1 {
+  margin: 8px 0 0;
+}
+
+.settings-section {
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+}
+
+.settings-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-bottom: 16px;
+}
+
+.settings-section-heading h2 {
+  margin: 6px 0 0;
+}
+
+.settings-text-link {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.settings-text-link:hover {
+  color: var(--text-h);
+}
+
+.settings-account-list {
+  display: grid;
+  max-width: 680px;
+  margin: 0;
+}
+
+.settings-account-list > div {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.7fr) minmax(0, 1fr);
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.settings-account-list dt {
+  color: var(--text);
+}
+
+.settings-account-list dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: var(--text-h);
+}
+
+.settings-session-status {
+  color: var(--text);
+}
+
+.settings-session-status.is-active {
+  color: var(--color-success);
+}
+
+.settings-session-description,
+.settings-empty {
+  color: var(--text);
+}
+
+.settings-signout-button {
+  margin-top: 16px;
+}
+
+.settings-danger-zone .eyebrow {
+  color: #d28c7d;
+}
+
+.settings-danger-description {
+  max-width: 620px;
+  color: var(--text);
+}
+
+.settings-delete-button {
+  display: inline-flex;
+  min-height: var(--control-height);
+  align-items: center;
+  justify-content: center;
+  padding: var(--button-padding);
+  border: 1px solid #a84d46;
+  border-radius: var(--button-radius);
+  color: #fff4f1;
+  background: #812f2f;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.settings-delete-button:hover:not(:disabled) {
+  border-color: #c36b60;
+  background: #963b37;
+}
+
+.settings-delete-button:focus-visible {
+  outline: 2px solid #d28c7d;
+  outline-offset: 3px;
+}
+
+.settings-delete-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.settings-delete-dialog {
+  width: min(460px, calc(100% - 32px));
+  max-width: calc(100% - 32px);
+  padding: 24px;
+  border: 1px solid #704949;
+  border-radius: 6px;
+  color: var(--text);
+  background: var(--surface-raised);
+}
+
+.settings-delete-dialog::backdrop {
+  background: rgba(4, 8, 12, 0.74);
+}
+
+.settings-delete-dialog h2 {
+  margin: 0 0 12px;
+  color: var(--text-h);
+}
+
+.settings-delete-dialog > p {
+  line-height: 1.6;
+}
+
+.settings-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.settings-page-message {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.settings-page-feedback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+@media (max-width: 600px) {
+  .settings-page {
+    width: min(100% - 32px, 920px);
+    padding: var(--page-padding-top-mobile) 0 var(--page-padding-bottom-mobile);
+  }
+
+  .settings-section {
+    padding: 20px 0;
+  }
+
+  .settings-account-list > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+}
